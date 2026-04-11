@@ -54,11 +54,7 @@ function BadgeKehadiran({ kehadiran }: { kehadiran: RsvpUcapan["kehadiran"] }) {
   );
 }
 
-function KartuUcapan({
-  item,
-}: {
-  item: RsvpUcapan;
-}) {
+function KartuUcapan({ item }: { item: RsvpUcapan }) {
   const waktu = item.createdAt
     ? item.createdAt.toDate().toLocaleDateString("id-ID", {
         day: "numeric",
@@ -70,20 +66,16 @@ function KartuUcapan({
 
   return (
     <div
-      className="bg-white border border-stone-100 rounded-xl p-4 flex gap-3 transition-all duration-200"
+      className="bg-white px-4 py-3.5 flex gap-3 transition-colors duration-150 hover:bg-stone-50"  // ← diupdate
     >
       <Avatar nama={item.nama} />
       <div className="flex-1 min-w-0">
         <div className="flex flex-wrap justify-between items-center gap-2 mb-1">
           <div className="flex items-center gap-2">
-            <span className="text-sm font-medium text-stone-800">
-              {item.nama}
-            </span>
+            <span className="text-sm font-medium text-stone-800">{item.nama}</span>
             <BadgeKehadiran kehadiran={item.kehadiran} />
             {item.kehadiran === "hadir" && item.jumlahTamu && (
-              <span className="text-xs text-stone-400">
-                {item.jumlahTamu} orang
-              </span>
+              <span className="text-xs text-stone-400">{item.jumlahTamu} orang</span>
             )}
           </div>
           <div className="flex items-center gap-2">
@@ -123,9 +115,8 @@ function StepIndicator({ step }: { step: Step }) {
   );
 }
 
-export default function SectionRsvpUcapan() {
-  const { data, loading, submitting, submitted, kirim } =
-    useRsvpUcapan();
+export default function RsvpUcapanSection() {
+  const { data, loading, submitting, submitted, kirim } = useRsvpUcapan();
   const [step, setStep] = useState<Step>(1);
   const [form, setForm] = useState<RsvpUcapanInput>({
     nama: "",
@@ -144,10 +135,10 @@ export default function SectionRsvpUcapan() {
   ).length;
 
   return (
-    <section className="py-16 px-6 max-w-xl mx-auto">
+    <section id="rsvp" className="max-w-xl mx-auto">
       <div className="text-center mb-8">
         <h2 className="font-serif text-3xl text-stone-800 tracking-wide">
-          RSVP & Ucapan
+          {step === 1 ? "RSVP" : "Ucapan & Doa"}
         </h2>
         <p className="text-sm text-stone-400 mt-2">
           Konfirmasi kehadiran dan tinggalkan doa terbaik
@@ -210,7 +201,8 @@ export default function SectionRsvpUcapan() {
               {form.kehadiran === "hadir" && (
                 <div>
                   <label className="text-xs font-medium text-stone-500 uppercase tracking-wider">
-                    Jumlah tamu (termasuk kamu) <span className="text-xs">Maks. 10</span>
+                    Jumlah tamu (termasuk kamu){" "}
+                    <span className="text-xs">Maks. 10</span>
                   </label>
                   <div className="mt-2 flex items-center gap-3">
                     <button
@@ -351,10 +343,15 @@ export default function SectionRsvpUcapan() {
             Belum ada ucapan. Jadilah yang pertama!
           </div>
         ) : (
-          <div className="flex flex-col gap-3">
-            {data.map((item) => (
-              <KartuUcapan key={item.id} item={item}/>
-            ))}
+          <div className="border border-stone-100 rounded-2xl overflow-hidden">
+            <div
+              className="flex flex-col divide-y divide-stone-100 overflow-y-auto"
+              style={{ maxHeight: "calc(7 * 5.5rem)" }}
+            >
+              {data.map((item) => (
+                <KartuUcapan key={item.id} item={item} />
+              ))}
+            </div>
           </div>
         )}
       </div>

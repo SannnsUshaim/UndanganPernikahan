@@ -24,37 +24,6 @@ export interface RsvpUcapan {
 export type RsvpUcapanInput = Omit<RsvpUcapan, "id" | "createdAt">;
 
 export const useRsvpUcapan = () => {
-  // const [komentar, setKomentar] = useState<Komentar[]>([]);
-  //   const [loading, setLoading] = useState(true);
-
-  //   useEffect(() => {
-  //     const q = query(collection(db, "komentar"), orderBy("createdAt", "asc"));
-  //     const unsub = onSnapshot(q, (snapshot) => {
-  //       const data = snapshot.docs.map((doc) => ({
-  //         id: doc.id,
-  //         ...doc.data(),
-  //       })) as Komentar[];
-  //       setKomentar(data);
-  //       setLoading(false);
-  //     });
-  //     return () => unsub();
-  //   }, []);
-
-  //   const kirimKomentar = async (nama: string, pesan: string): Promise<void> => {
-  //     await addDoc(collection(db, "komentar"), {
-  //       nama,
-  //       pesan,
-  //       createdAt: serverTimestamp(),
-  //     });
-  //     console.log(nama, pesan);
-  //   };
-
-  //   const hapusKomentar = async (id: string): Promise<void> => {
-  //     await deleteDoc(doc(db, "komentar", id));
-  //     console.log("Komentar dihapus:", id);
-  //   };
-
-  //   return { komentar, loading, kirimKomentar, hapusKomentar };
   const [data, setData] = useState<RsvpUcapan[]>([]);
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
@@ -75,19 +44,11 @@ export const useRsvpUcapan = () => {
   }, []);
 
   const kirim = async (
-    // nama: string,
-    // jumlahTamu: number,
-    // kehadiran: string,
-    // pesan: string,
     input: RsvpUcapanInput
   ): Promise<void> => {
     setSubmitting(true);
     try {
       await addDoc(collection(db, "rsvp_ucapan"), {
-        // nama,
-        // kehadiran,
-        // jumlahTamu,
-        // pesan,
         ...input,
         createdAt: serverTimestamp(),
       });
