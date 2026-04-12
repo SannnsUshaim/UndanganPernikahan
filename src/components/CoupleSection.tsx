@@ -35,14 +35,14 @@ export default function CoupleSection() {
         </p>
       </div>
 
-      <div className="flex gap-6 max-w-xl mx-auto">
+      <div className="flex flex-col p-4 gap-6 max-w-xl mx-auto">
         {mempelai.map((m, i) => (
           <div
             key={i}
-            className="flex flex-col w-full h-130 bg-dark border border-dark rounded-2xl p-2 gap-5 items-start text-left"
+            className="flex flex-col w-full h-130 bg-dark border border-dark rounded-2xl p-3 gap-5 items-start text-left"
           >
             <div
-              className=" w-70 h-65 rounded-xl bg-stone-100 bg-cover bg-center flex-shrink-0 border-1 border-light"
+              className="w-full h-80 rounded-xl bg-stone-100 bg-cover bg-center border border-light aspect-4/3"
               style={{ backgroundImage: `url(${m.foto})` }}
             />
             <div className="flex flex-col gap-1 ms-1">
