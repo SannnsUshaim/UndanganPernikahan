@@ -3,13 +3,13 @@ import { useState } from "react";
 const rekening = [
   {
     bank: "BCA",
-    logo: "/images/logo-bca.png",
+    logo: "/src/assets/logo_bca.png",
     norek: "1234567890",
     atasNama: "Nama Mempelai Pria",
   },
   {
     bank: "Mandiri",
-    logo: "/images/logo-mandiri.png",
+    logo: "/src/assets/logo_mandiri.png",
     norek: "0987654321",
     atasNama: "Nama Mempelai Wanita",
   },
@@ -25,11 +25,11 @@ export default function GiftSection() {
   };
 
   return (
-    <section id="gift" className="py-20 px-6">
+    <section id="gift" className="bg-light py-20 px-6">
       <div className="text-center mb-4">
-        <p className="text-xs tracking-[0.3em] text-stone-400 uppercase mb-3">Hadiah</p>
-        <h2 className="font-serif text-3xl text-stone-800">Wedding Gift</h2>
-        <p className="text-sm text-stone-400 mt-3 max-w-sm mx-auto leading-relaxed">
+        <p className="text-xs tracking-[0.3em] text-dark/75 uppercase mb-3">Gift</p>
+        <h2 className="font-serif text-3xl text-dark">Wedding Gift</h2>
+        <p className="text-sm text-dark/60 mt-3 max-w-sm mx-auto leading-relaxed">
           Doa restu Anda adalah hadiah terindah. Namun jika ingin memberikan tanda kasih,
           dapat melalui:
         </p>
@@ -37,22 +37,22 @@ export default function GiftSection() {
 
       <div className="flex flex-col gap-4 max-w-xl mx-auto mt-8">
         {rekening.map((r, i) => (
-          <div key={i} className="bg-white border border-stone-100 rounded-2xl p-5">
+          <div key={i} className="bg-dark border border-primary rounded-2xl p-5">
             <div className="flex items-center gap-4 mb-4">
               <div
-                className="w-12 h-12 rounded-xl bg-stone-50 border border-stone-100 bg-contain bg-center bg-no-repeat"
+                className="w-24 h-24 rounded-xl bg-zinc-50 border border-light bg-contain bg-center bg-no-repeat"
                 style={{ backgroundImage: `url(${r.logo})` }}
               />
               <div>
-                <p className="font-medium text-stone-800">{r.bank}</p>
-                <p className="text-xs text-stone-400">{r.atasNama}</p>
+                <p className="font-medium text-light">{r.bank}</p>
+                <p className="text-xs text-light/80">{r.atasNama}</p>
               </div>
             </div>
-            <div className="flex items-center justify-between bg-stone-50 rounded-xl px-4 py-3">
-              <span className="text-lg font-medium text-stone-700 tracking-wider">{r.norek}</span>
+            <div className="flex items-center justify-between bg-zinc-50 rounded-xl px-4 py-2">
+              <span className="text-base font-medium text-dark tracking-wider">{r.norek}</span>
               <button
                 onClick={() => handleCopy(r.norek)}
-                className="text-xs text-stone-500 hover:text-stone-800 transition border border-stone-200 px-3 py-1.5 rounded-lg"
+                className="text-xs lg:text-sm text-dark/60 hover:text-light hover:bg-dark transition border border-dark/60 px-3 py-1.5 rounded-lg hover:shadow-md hover:scale-105 cursor-pointer"
               >
                 {copied === r.norek ? "Tersalin!" : "Salin"}
               </button>

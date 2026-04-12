@@ -44,9 +44,9 @@ export default function CoverPage({
         <p className="text-xs lg:text-base tracking-[0.3em] text-light uppercase mb-3">
           The Wedding of
         </p>
-        <h1 className="font-bride text-7xl text-light tracking-wide mb-2">Erlin</h1>
+        <h1 className="font-bride text-7xl text-light tracking-wider mb-2">Erlin</h1>
         <p className="text-light/80 text-4xl font-bride">&</p>
-        <h1 className="font-bride text-7xl text-light tracking-wide mt-2 mb-4">Fatih</h1>
+        <h1 className="font-bride text-7xl text-light tracking-wider mt-2 mb-4">Fatih</h1>
         <p className="text-light/80 text-sm lg:text-base tracking-widest mb-10">
           Saturday, 23 · 05 · 2026
         </p>

@@ -36,7 +36,7 @@ function Countdown() {
       {Object.entries(timeLeft).map(([key, val]) => (
         <div
           key={key}
-          className="bg-white border border-stone-100 rounded-xl py-3 text-center"
+          className="bg-light border border-stone-100 rounded-xl py-3 text-center"
         >
           <div className="text-2xl font-medium text-dar">
             {String(val).padStart(2, "0")}

@@ -40,7 +40,7 @@ export default function Sidebar() {
       {/* Toggle button */}
       <button
         onClick={() => setOpen(!open)}
-        className="fixed top-5 right-5 z-50 w-10 h-10 bg-white/80 backdrop-blur-sm border border-stone-200 rounded-full flex flex-col items-center justify-center gap-1.5 shadow-sm"
+        className="fixed top-5 right-5 z-50 w-10 h-10 bg-white/80 backdrop-blur-sm border border-stone-200 rounded-full flex flex-col items-center justify-center gap-1.5 shadow-sm cursor-pointer"
       >
         <span className={`block w-4 h-px bg-stone-600 transition-all duration-300 ${open ? "rotate-45 translate-y-1.5" : ""}`} />
         <span className={`block w-4 h-px bg-stone-600 transition-all duration-300 ${open ? "opacity-0" : ""}`} />

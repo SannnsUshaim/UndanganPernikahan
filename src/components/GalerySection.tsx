@@ -1,11 +1,16 @@
 import { useState, useEffect } from "react";
 
 const galeriImages = [
-  "/images/galeri-1.jpg",
-  "/images/galeri-2.jpg",
-  "/images/galeri-3.jpg",
-  "/images/galeri-4.jpg",
-  "/images/galeri-5.jpg",
+  "/images/Prewed_2.jpg",
+  "/images/Prewed_17.jpg",
+  "/images/Prewed_35.jpg",
+  "/images/Prewed_51.jpg",
+  "/images/Prewed_52.jpg",
+  "/images/Prewed_71.jpg",
+  "/images/Prewed_127.jpg",
+  "/images/Prewed_128.jpg",
+  "/images/Prewed_138.jpg",
+  "/images/Prewed_139.jpg",
 ];
 
 export default function GalerySection() {
@@ -22,14 +27,14 @@ export default function GalerySection() {
   const next = () => setCurrent((c) => (c + 1) % galeriImages.length);
 
   return (
-    <section id="galeri" className="py-20 px-6">
+    <section id="galeri" className="bg-dark py-20 px-6">
       <div className="text-center mb-10">
-        <p className="text-xs tracking-[0.3em] text-stone-400 uppercase mb-3">Foto Prewedding</p>
-        <h2 className="font-serif text-3xl text-stone-800">Galeri</h2>
+        <p className="text-xs lg:text-sm tracking-[0.3em] text-light uppercase mb-3">Our Moment</p>
+        <h2 className="font-body text-3xl text-light tracking-wide">Galery</h2>
       </div>
 
       <div className="relative max-w-xl mx-auto">
-        <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-stone-100">
+        <div className="relative aspect-4/3 rounded-2xl overflow-hidden bg-stone-100">
           {galeriImages.map((src, i) => (
             <div
               key={src}
@@ -64,7 +69,7 @@ export default function GalerySection() {
             <button
               key={i}
               onClick={() => setCurrent(i)}
-              className={`h-1 rounded-full transition-all duration-300 ${i === current ? "w-5 bg-stone-600" : "w-1.5 bg-stone-300"}`}
+              className={`h-1 rounded-full transition-all duration-300 ${i === current ? "w-5 bg-secondary" : "w-1.5 bg-light/50"}`}
             />
           ))}
         </div>

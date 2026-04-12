@@ -2,54 +2,54 @@ const acara = [
   {
     title: "Akad Nikah",
     jam: "08.00 - 10.00 WIB",
-    tempat: "Nama Gedung / Masjid",
-    alamat: "Jl. Nama Jalan No. 123, Kota",
-    maps: "https://maps.google.com/?q=...",
+    tempat: "Bumi Anwari",
+    alamat: "Jl. Benteng Kidul No.99, Dayeuhluhur, Kec. Warudoyong, Kota Sukabumi, Jawa Barat 43291",
+    maps: "https://maps.app.goo.gl/4eDWgTrPs57Y619RA",
   },
   {
     title: "Resepsi",
-    jam: "11.00 - 15.00 WIB",
-    tempat: "Nama Gedung",
-    alamat: "Jl. Nama Jalan No. 123, Kota",
-    maps: "https://maps.google.com/?q=...",
+    jam: "10.30 - 13.00 WIB",
+    tempat: "Bumi Anwari",
+    alamat: "Jl. Benteng Kidul No.99, Dayeuhluhur, Kec. Warudoyong, Kota Sukabumi, Jawa Barat 43291",
+    maps: "https://maps.app.goo.gl/4eDWgTrPs57Y619RA",
   },
 ];
 
 export default function SectionVenue() {
   return (
-    <section id="venue" className="py-20 px-6">
+    <section id="venue" className="bg-dark py-20 px-6">
       <div className="text-center mb-12">
-        <p className="text-xs tracking-[0.3em] text-stone-400 uppercase mb-3">
-          Sabtu, 12 Juli 2025
+        <p className="text-xs tracking-[0.3em] text-light uppercase mb-3">
+          Saturday, 23 May 2026
         </p>
-        <h2 className="font-serif text-3xl text-stone-800">Lokasi Acara</h2>
+        <h2 className="font-serif text-3xl text-light tracking-wide">Venue</h2>
       </div>
 
       <div className="flex flex-col gap-5 max-w-xl mx-auto">
         {acara.map((a, i) => (
           <div
             key={i}
-            className="bg-white border border-stone-100 rounded-2xl p-6"
+            className="bg-light border border-light rounded-2xl p-7"
           >
             <div className="flex justify-between items-start mb-4">
               <div>
-                <p className="text-xs tracking-widest text-stone-400 uppercase mb-1">
+                <p className="text-xs tracking-widest text-primary uppercase mb-1">
                   {a.title}
                 </p>
-                <h3 className="font-serif text-xl text-stone-800">
+                <h3 className="font-serif text-xl text-dark">
                   {a.tempat}
                 </h3>
               </div>
-              <span className="text-xs bg-stone-100 text-stone-600 px-3 py-1.5 rounded-full">
+              <span className="text-xs bg-dark text-light px-3 py-1.5 rounded-full">
                 {a.jam}
               </span>
             </div>
-            <p className="text-sm text-stone-500 mb-5">{a.alamat}</p>
+            <p className="text-sm text-dark mb-5">{a.alamat}</p>
             <a
               href={a.maps}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full py-2.5 rounded-full border border-stone-200 text-sm text-stone-700 hover:bg-stone-50 transition"
+              className="flex items-center justify-center gap-2 w-full py-2.5 rounded-full border border-dark text-sm text-dark hover:bg-dark hover:text-light hover:scale-105 hover:shadow-xl transition"
             >
               <svg
                 width="14"

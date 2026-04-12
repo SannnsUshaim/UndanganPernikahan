@@ -1,16 +1,17 @@
 import { useState, useEffect } from "react";
 
 const coverImages = [
-  "/images/cover-1.jpg",
-  "/images/cover-2.jpg",
-  "/images/cover-3.jpg",
+  "/images/Prewed_147.jpg",
+  "/images/Prewed_145.jpg",
+  "/images/Prewed_146.jpg",
+  "/images/Prewed_148.jpg",
 ];
 
 export default function ClosingSection() {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    const t = setInterval(() => setCurrent((c) => (c + 1) % coverImages.length), 4000);
+    const t = setInterval(() => setCurrent((c) => (c + 1) % coverImages.length), 3000);
     return () => clearInterval(t);
   }, []);
 
@@ -25,14 +26,14 @@ export default function ClosingSection() {
       ))}
       <div className="absolute inset-0 bg-black/40" />
       <div className="relative z-10 text-center px-6">
-        <p className="text-xs tracking-[0.3em] text-white/60 uppercase mb-6">Terima Kasih</p>
-        <h2 className="font-serif text-5xl text-white mb-4">Nama & Nama</h2>
-        <div className="w-12 h-px bg-white/40 mx-auto my-6" />
-        <p className="text-sm text-white/70 leading-relaxed max-w-xs mx-auto">
+        <p className="text-xs lg:text-sm tracking-[0.3em] text-light/65 uppercase mb-6">Thank You</p>
+        <h2 className="font-serif text-5xl lg:text-6xl text-light mb-4 font-bride tracking-wider">Erlin & Fatih</h2>
+        <div className="w-24 h-px bg-light/50 mx-auto my-6" />
+        <p className="text-sm text-light/80 leading-relaxed max-w-xs mx-auto">
           Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i
           berkenan hadir dan memberikan doa restu.
         </p>
-        <p className="text-xs text-white/50 mt-8 tracking-widest">SABTU, 12 · 07 · 2025</p>
+        <p className="text-xs text-light/70 mt-8 tracking-widest">SATURDAY, 12 · 07 · 2025</p>
       </div>
     </section>
   );
