@@ -3,13 +3,13 @@ import { useState } from "react";
 const rekening = [
   {
     bank: "BCA",
-    logo: "/src/assets/logo_bca.png",
+    logo: "/assets/logo_bca.png",
     norek: "1234567890",
     atasNama: "Nama Mempelai Pria",
   },
   {
     bank: "Mandiri",
-    logo: "/src/assets/logo_mandiri.png",
+    logo: "/assets/logo_mandiri.png",
     norek: "0987654321",
     atasNama: "Nama Mempelai Wanita",
   },
