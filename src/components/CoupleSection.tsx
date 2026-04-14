@@ -15,7 +15,8 @@ const mempelai = [
     ibu: "Ida Kusuma Wardhani",
     foto: "/images/profil_fatih.jpg",
     ig: "@username",
-    keterangan: "Putra pertama dari\nBapak Eko Yuwono & Ibu Ida Kusuma Wardhani",
+    keterangan:
+      "Putra pertama dari\nBapak Eko Yuwono & Ibu Ida Kusuma Wardhani",
   },
 ];
 
@@ -29,7 +30,7 @@ export default function CoupleSection() {
         <h2 className="text-xl lg:text-3xl font-medium tracking-wide text-dark">
           The Bride And The Groom
         </h2>
-        <p className="text-sm text-dark/80 mt-3 leading-relaxed max-w-xs lg:max-w-sm mx-auto">
+        <p className="text-xs lg:text-sm text-dark/80 mt-3 leading-relaxed max-w-xs lg:max-w-sm mx-auto">
           Dengan memohon rahmat dan ridho Allah SWT, kami mengundang kehadiran
           Bapak/Ibu/Saudara/i
         </p>
@@ -55,7 +56,12 @@ export default function CoupleSection() {
               <p className="text-sm text-light/80 leading-relaxed whitespace-pre-line">
                 {m.keterangan}
               </p>
-              <a href={`https://instagram.com/${m.ig.replace("@", "")}`} target="_blank" rel="noopener noreferrer" className="text-xs text-light/60 hover:text-light mt-2">
+              <a
+                href={`https://instagram.com/${m.ig.replace("@", "")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-light/60 hover:text-light mt-2"
+              >
                 {m.ig}
               </a>
             </div>
