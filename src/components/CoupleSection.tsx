@@ -23,13 +23,13 @@ export default function CoupleSection() {
   return (
     <section id="mempelai" className="bg-light min-h-dvh lg:min-h-screen py-20">
       <div className="flex flex-col items-center justify-center text-center gap-3 mb-12">
-        <p className="text-xs tracking-[0.32em] text-dark uppercase mb-3">
+        <p className="text-xs tracking-[0.2em] lg:tracking-[0.32em] text-dark uppercase mb-3">
           Bismillahirrahmanirrahim
         </p>
-        <h2 className="text-3xl font-medium tracking-wide text-dark">
+        <h2 className="text-xl lg:text-3xl font-medium tracking-wide text-dark">
           The Bride And The Groom
         </h2>
-        <p className="text-sm text-dark/80 mt-3 leading-relaxed max-w-sm mx-auto">
+        <p className="text-sm text-dark/80 mt-3 leading-relaxed max-w-xs lg:max-w-sm mx-auto">
           Dengan memohon rahmat dan ridho Allah SWT, kami mengundang kehadiran
           Bapak/Ibu/Saudara/i
         </p>
@@ -46,10 +46,10 @@ export default function CoupleSection() {
               style={{ backgroundImage: `url(${m.foto})` }}
             />
             <div className="flex flex-col gap-1 ms-1">
-              <p className="text-xs tracking-widest text-light/90 uppercase mb-1">
+              <p className="text-xs tracking-[0.2em] text-light/90 uppercase mb-1">
                 {i === 0 ? "Mempelai Wanita" : "Mempelai Pria"}
               </p>
-              <h3 className="font-serif text-2xl text-light mb-1">
+              <h3 className="font-serif text-2xl tracking-wider text-light mb-1">
                 {m.nama}
               </h3>
               <p className="text-sm text-light/80 leading-relaxed whitespace-pre-line">
