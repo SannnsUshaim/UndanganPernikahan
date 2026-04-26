@@ -5,7 +5,6 @@ const mempelai = [
     ayah: "Suma",
     ibu: "Linda Rosita",
     foto: "/images/profil_erlin.jpg",
-    ig: "@username",
     keterangan: "Putri pertama dari\nBapak Suma & Ibu Linda Rosita",
   },
   {
@@ -14,7 +13,6 @@ const mempelai = [
     ayah: "Eko Yuwono",
     ibu: "Ida Kusuma Wardhani",
     foto: "/images/profil_fatih.jpg",
-    ig: "@username",
     keterangan:
       "Putra pertama dari\nBapak Eko Yuwono & Ibu Ida Kusuma Wardhani",
   },
@@ -24,16 +22,13 @@ export default function CoupleSection() {
   return (
     <section id="mempelai" className="bg-light min-h-dvh lg:min-h-screen py-20">
       <div className="flex flex-col items-center justify-center text-center gap-3 mb-12">
-        <p className="text-xs tracking-[0.2em] lg:tracking-[0.32em] text-dark uppercase mb-3">
+        <p className="text-xs lg:text-sm tracking-[0.2em] lg:tracking-[0.32em] text-dark uppercase mb-3">
           Bismillahirrahmanirrahim
         </p>
-        <h2 className="text-xl lg:text-3xl font-medium tracking-wide text-dark">
-          The Bride And The Groom
-        </h2>
-        <p className="text-xs lg:text-sm text-dark/80 mt-3 leading-relaxed max-w-xs lg:max-w-sm mx-auto">
-          Dengan memohon rahmat dan ridho Allah SWT, kami mengundang kehadiran
-          Bapak/Ibu/Saudara/i
+        <p className="text-xs lg:text-sm px-6 lg:px-20 text-dark">
+          "Allah menjadikan bagimu pasangan (suami atau istri) dari jenis kamu sendiri, menjadikan bagimu dari pasanganmu anak-anak dan cucu-cucu, serta menganugerahi kamu rezeki yang baik-baik. Mengapa terhadap yang batil mereka beriman, sedangkan terhadap nikmat Allah mereka ingkar?"
         </p>
+        <p className="text-xs lg:text-sm text-dark">(Q.S. An-Nahl : 72)</p>
       </div>
 
       <div className="flex flex-col p-4 gap-6 max-w-xl mx-auto">
@@ -56,14 +51,6 @@ export default function CoupleSection() {
               <p className="text-sm text-light/80 leading-relaxed whitespace-pre-line">
                 {m.keterangan}
               </p>
-              <a
-                href={`https://instagram.com/${m.ig.replace("@", "")}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs text-light/60 hover:text-light mt-2"
-              >
-                {m.ig}
-              </a>
             </div>
           </div>
         ))}

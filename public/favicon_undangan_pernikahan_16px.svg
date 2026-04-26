@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-2 {
+        fill: #fcf5ee;
+        font-family: PlayfairDisplay-Regular, 'Playfair Display';
+        font-size: 11px;
+        font-variation-settings: 'wght' 400;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #fcf5ee;
+        stroke-miterlimit: 10;
+        stroke-width: .25px;
+      }
+
+      .cls-4 {
+        fill: #850e35;
+      }
+    </style>
+  </defs>
+  <rect class="cls-4" width="16" height="16" rx="2" ry="2"/>
+  <text class="cls-2" transform="translate(1.65 11.37)"><tspan x="0" y="0">E</tspan><tspan class="cls-1" x="6.7" y="0">F</tspan></text>
+  <line class="cls-3" x1="1" y1="7.51" x2="15" y2="7.51"/>
+  <line class="cls-3" x1="1" y1="13.19" x2="15" y2="13.19"/>
+</svg>

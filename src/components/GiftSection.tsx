@@ -4,15 +4,21 @@ const rekening = [
   {
     bank: "BCA",
     logo: "/assets/logo_bca.png",
-    norek: "1234567890",
-    atasNama: "Nama Mempelai Pria",
+    norek: "3390329490",
+    atasNama: "Erlin Sumianti",
   },
   {
     bank: "Mandiri",
     logo: "/assets/logo_mandiri.png",
-    norek: "0987654321",
-    atasNama: "Nama Mempelai Wanita",
+    norek: "1020010758057",
+    atasNama: "Erlin Sumianti",
   },
+  {
+    bank: "Jago",
+    logo: "/assets/logo_jago.png",
+    norek: "1020010758057",
+    atasNama: "Muhammad Fatih Kautsar",
+  }
 ];
 
 export default function GiftSection() {
@@ -44,8 +50,8 @@ export default function GiftSection() {
                 style={{ backgroundImage: `url(${r.logo})` }}
               />
               <div>
-                <p className="font-medium text-light">{r.bank}</p>
-                <p className="text-xs text-light/80">{r.atasNama}</p>
+                <p className="font-medium text-lg text-light">{r.bank}</p>
+                <p className="text-xs lg:text-sm text-light/80">{r.atasNama}</p>
               </div>
             </div>
             <div className="flex items-center justify-between bg-zinc-50 rounded-xl px-4 py-2">

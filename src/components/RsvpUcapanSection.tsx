@@ -4,6 +4,7 @@ import {
   type RsvpUcapan,
   type RsvpUcapanInput,
 } from "../hooks/useRsvpUcapan";
+import { Heart, HeartCrack, PartyPopper } from "lucide-react";
 
 type Step = 1 | 2;
 
@@ -154,9 +155,9 @@ export default function RsvpUcapanSection() {
         </div>
 
         <div className="flex items-center gap-3 mb-8">
-          <div className="flex-1 h-px bg-stone-200" />
-          <span className="text-stone-300 text-sm lg:text-xl">✦</span>
-          <div className="flex-1 h-px bg-stone-200" />
+          <div className="flex-1 h-px bg-light" />
+          <span className="text-light text-sm lg:text-xl">✦</span>
+          <div className="flex-1 h-px bg-light" />
         </div>
 
         {!submitted ? (
@@ -188,7 +189,7 @@ export default function RsvpUcapanSection() {
                       <button
                         key={val}
                         onClick={() => setForm({ ...form, kehadiran: val })}
-                        className={`py-4 rounded-xl border text-sm transition-all ${
+                        className={`flex flex-col py-4 rounded-xl border text-sm transition-all items-center justify-center ${
                           form.kehadiran === val
                             ? val === "hadir"
                               ? "bg-green-50 border-green-300 text-green-800"
@@ -197,7 +198,11 @@ export default function RsvpUcapanSection() {
                         }`}
                       >
                         <div className="text-xl mb-1">
-                          {val === "hadir" ? "🎉" : "😢"}
+                          {val === "hadir" ? (
+                            <PartyPopper size={32} />
+                          ) : (
+                            <HeartCrack size={32} />
+                          )}
                         </div>
                         {val === "hadir" ? "Hadir" : "Tidak hadir"}
                       </button>
@@ -294,9 +299,13 @@ export default function RsvpUcapanSection() {
             )}
           </>
         ) : (
-          <div className="text-center py-8">
-            <div className="text-5xl mb-4">
-              {form.kehadiran === "hadir" ? "🎉" : "💌"}
+          <div className="flex flex-col items-center justify-center py-8">
+            <div className="text-5xl mb-4 text-light">
+              {form.kehadiran === "hadir" ? (
+                <PartyPopper size={80} />
+              ) : (
+                <Heart size={80} />
+              )}
             </div>
             <h3 className="font-serif text-2xl text-light mb-3">
               {form.kehadiran === "hadir"
@@ -314,9 +323,9 @@ export default function RsvpUcapanSection() {
         {/* List ucapan */}
         <div className="mt-12">
           <div className="flex items-center gap-3 mb-6">
-            <div className="flex-1 h-px bg-stone-200" />
-            <span className="text-stone-300 text-sm lg:text-xl">✦</span>
-            <div className="flex-1 h-px bg-stone-200" />
+            <div className="flex-1 h-px bg-light" />
+            <span className="text-light text-sm lg:text-xl">✦</span>
+            <div className="flex-1 h-px bg-light" />
           </div>
 
           {/* Ringkasan */}

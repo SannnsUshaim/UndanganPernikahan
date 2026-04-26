@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
+import { useGuest } from "../hooks/useGuest";
 
 const coverImages = [
-  '/images/Prewed_21.jpg',
-  '/images/Prewed_11.jpg',
-  '/images/Prewed_1.jpg',
-  '/images/Prewed_35.jpg'
+  "/images/Prewed_21.jpg",
+  "/images/Prewed_11.jpg",
+  "/images/Prewed_1.jpg",
+  "/images/Prewed_35.jpg",
 ];
 
 export default function CoverPage({
@@ -12,6 +13,7 @@ export default function CoverPage({
 }: {
   desktopMode?: boolean;
 }) {
+  const { nama } = useGuest();
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -26,7 +28,7 @@ export default function CoverPage({
   };
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden ">
       {/* Carousel */}
       {coverImages.map((src, i) => (
         <div
@@ -41,18 +43,30 @@ export default function CoverPage({
 
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col items-center justify-end pb-16 text-center px-6">
+        <div className="mb-6 px-6 py-2 lg:px-10 lg:py-3 border border-light rounded-full">
+          <p className="text-xs lg:text-sm tracking-widest text-light/80">
+            Kepada Yth.
+          </p>
+          <p className="text-sm lg:text-base text-light font-medium mt-0.5 capitalize">
+            {nama}
+          </p>
+        </div>
         <p className="text-xs lg:text-base tracking-[0.3em] text-light uppercase mb-3">
           The Wedding of
         </p>
-        <h1 className="font-bride text-7xl text-light tracking-wider mb-2">Erlin</h1>
+        <h1 className="font-bride text-7xl text-light tracking-wider mb-2">
+          Erlin
+        </h1>
         <p className="text-light/80 text-4xl font-bride">&</p>
-        <h1 className="font-bride text-7xl text-light tracking-wider mt-2 mb-4">Fatih</h1>
+        <h1 className="font-bride text-7xl text-light tracking-wider mt-2 mb-4">
+          Fatih
+        </h1>
         <p className="text-light/80 text-sm lg:text-base tracking-widest mb-10">
           Saturday, 23 · 05 · 2026
         </p>
 
         {/* Dots */}
-        <div className="flex gap-2 mb-10">
+        {/* <div className="flex gap-2 mb-10">
           {coverImages.map((_, i) => (
             <button
               key={i}
@@ -60,7 +74,7 @@ export default function CoverPage({
               className={`h-1 rounded-full transition-all duration-700 ${i === current ? "w-6 bg-light" : "w-2 bg-light/40"}`}
             />
           ))}
-        </div>
+        </div> */}
 
         {/* Tombol open — mobile only */}
         {!desktopMode && (

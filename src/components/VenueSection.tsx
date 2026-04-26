@@ -8,7 +8,7 @@ const acara = [
   },
   {
     title: "Resepsi",
-    jam: "10.30 - 13.00 WIB",
+    jam: "10.30 - 14.00 WIB",
     tempat: "Bumi Anwari",
     alamat: "Jl. Benteng Kidul No.99, Dayeuhluhur, Kec. Warudoyong, Kota Sukabumi, Jawa Barat 43291",
     maps: "https://maps.app.goo.gl/4eDWgTrPs57Y619RA",
