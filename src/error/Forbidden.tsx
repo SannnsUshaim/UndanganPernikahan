@@ -3,7 +3,7 @@ export default function Forbidden() {
     <div className="min-h-screen flex flex-col items-center justify-center text-center px-6 gap-5 bg-light">
       <div className="flex gap-5 items-center justify-center">
         <img
-          src="/src/assets/EF_icon.svg"
+          src="/EF_Icon.svg"
           alt="EF Icon"
           className="w-24 h-24 mb-4"
         />
