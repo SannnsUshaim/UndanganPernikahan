@@ -358,11 +358,11 @@ export default function RsvpUcapanSection() {
           </div>
 
           {loading ? (
-            <div className="text-center py-8 text-sm text-stone-400">
+            <div className="text-center py-8 text-sm text-light">
               Memuat...
             </div>
           ) : data.length === 0 ? (
-            <div className="text-center py-8 text-sm text-stone-400">
+            <div className="text-center py-8 text-sm text-light">
               Belum ada ucapan. Jadilah yang pertama!
             </div>
           ) : (
