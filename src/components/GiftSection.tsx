@@ -16,7 +16,7 @@ const rekening = [
   {
     bank: "Jago",
     logo: "/assets/logo_jago.png",
-    norek: "1020010758057",
+    norek: "103664528414",
     atasNama: "Muhammad Fatih Kautsar",
   }
 ];
