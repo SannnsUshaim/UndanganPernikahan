@@ -295,9 +295,9 @@ Wassalamualaikum Wr. Wb.
               {search ? "Tamu tidak ditemukan." : "Belum ada tamu."}
             </div>
           ) : (
-            <div className="flex flex-col divide-y divide-stone-50">
+            <div className="flex flex-col divide-y divide-stone-50 gap-2">
               {filtered.map((tamu) => (
-                <div key={tamu.id} className="py-3 flex items-center gap-3">
+                <div key={tamu.id} className="py-3 flex items-center gap-3 border border-dark px-4 first:rounded-tl-xl first:rounded-tr-xl last:rounded-bl-xl last:rounded-br-xl">
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-medium text-stone-800">{tamu.nama}</p>
                     <p className="text-xs text-stone-400 truncate mt-0.5">
@@ -307,19 +307,19 @@ Wassalamualaikum Wr. Wb.
                   <div className="flex gap-2 flex-shrink-0">
                     <button
                       onClick={() => copyLink(tamu.token)}
-                      className="text-xs px-3 py-1.5 rounded-full border border-stone-200 text-stone-600 hover:bg-stone-50 transition"
+                      className="text-xs px-3 py-1.5 rounded-full border border-stone-200 text-stone-600 hover:bg-stone-50 transition cursor-pointer"
                     >
                       {copied === tamu.token ? "✓ Link" : "Link"}
                     </button>
                     <button
                       onClick={() => copyPesanWA(tamu.nama, tamu.token)}
-                      className="text-xs px-3 py-1.5 rounded-full border border-green-200 text-green-700 hover:bg-green-50 transition"
+                      className="text-xs px-3 py-1.5 rounded-full border border-green-200 text-green-700 hover:bg-green-50 transition cursor-pointer"
                     >
                       {copied === tamu.token + "_wa" ? "✓ WA" : "WA"}
                     </button>
                     <button
                       onClick={() => hapusTamu(tamu.id)}
-                      className="text-xs px-3 py-1.5 rounded-full border border-red-100 text-red-500 hover:bg-red-50 transition"
+                      className="text-xs px-3 py-1.5 rounded-full border border-red-100 text-red-500 hover:bg-red-50 transition cursor-pointer"
                     >
                       Hapus
                     </button>
