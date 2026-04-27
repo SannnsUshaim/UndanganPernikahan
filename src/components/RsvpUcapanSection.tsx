@@ -67,7 +67,7 @@ function KartuUcapan({ item }: { item: RsvpUcapan }) {
 
   return (
     <div
-      className="bg-light px-4 py-3.5 flex gap-3 transition-colors duration-150 hover:bg-secondary" // ← diupdate
+      className="bg-light px-4 py-3.5 flex gap-3 transition-colors duration-150 hover:bg-secondary"
     >
       <Avatar nama={item.nama} />
       <div className="flex-1 min-w-0">
@@ -336,9 +336,6 @@ export default function RsvpUcapanSection() {
                 {totalTamu > hadirCount && ` (+${totalTamu - hadirCount})`}
               </div>
               <div className="text-xs text-green-600 mt-1">Tamu Hadir</div>
-              {/* <div className="text-lg font-bold text-green-800">
-                {`Total Tamu: ${totalTamu}`}
-              </div> */}
             </div>
             <div className="bg-red-50 border border-red-100 rounded-xl p-3 text-center">
               <div className="text-2xl font-medium text-red-800">

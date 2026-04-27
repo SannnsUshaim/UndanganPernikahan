@@ -65,18 +65,6 @@ export default function CoverPage({
           Saturday, 23 · 05 · 2026
         </p>
 
-        {/* Dots */}
-        {/* <div className="flex gap-2 mb-10">
-          {coverImages.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrent(i)}
-              className={`h-1 rounded-full transition-all duration-700 ${i === current ? "w-6 bg-light" : "w-2 bg-light/40"}`}
-            />
-          ))}
-        </div> */}
-
-        {/* Tombol open — mobile only */}
         {!desktopMode && (
           <button
             onClick={handleOpen}

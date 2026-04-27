@@ -6,7 +6,6 @@ function LoadingScreen() {
   const [dots, setDots] = useState("");
 
   useEffect(() => {
-    // Animasi dots sequential
     let dotCount = 0;
     const dotTimer = setInterval(() => {
       dotCount = (dotCount + 1) % 4;

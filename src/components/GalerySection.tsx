@@ -47,8 +47,6 @@ export default function GalerySection() {
               style={{ backgroundImage: `url(${src})` }}
             />
           ))}
-
-          {/* Prev / Next */}
           <button
             onClick={prev}
             className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 bg-white/70 backdrop-blur-sm rounded-full flex items-center justify-center text-stone-700 hover:bg-white transition"
@@ -61,14 +59,10 @@ export default function GalerySection() {
           >
             ›
           </button>
-
-          {/* Counter */}
           <div className="absolute bottom-3 right-4 text-xs text-white/80 bg-black/30 px-2 py-1 rounded-full">
             {current + 1} / {galeriImages.length}
           </div>
         </div>
-
-        {/* Dots */}
         <div className="flex justify-center gap-1.5 mt-4">
           {galeriImages.map((_, i) => (
             <button

@@ -67,16 +67,16 @@ export default function Sidebar() {
       {/* Toggle button */}
       <button
         onClick={() => setOpen(!open)}
-        className="fixed top-5 right-5 z-50 w-10 h-10 bg-white/80 backdrop-blur-sm border border-stone-200 rounded-full flex flex-col items-center justify-center gap-1.5 shadow-sm cursor-pointer"
+        className="fixed top-5 right-5 z-50 w-10 h-10 bg-light/80 backdrop-blur-sm border border-light rounded-full flex flex-col items-center justify-center gap-1.5 shadow-sm cursor-pointer hover:bg-light transition-all duration-300"
       >
         <span
-          className={`block w-4 h-px bg-stone-600 transition-all duration-300 ${open ? "rotate-45 translate-y-1.5" : ""}`}
+          className={`block w-4 h-px bg-dark transition-all duration-300 ${open ? "rotate-45 translate-y-1.5" : ""}`}
         />
         <span
-          className={`block w-4 h-px bg-stone-600 transition-all duration-300 ${open ? "opacity-0" : ""}`}
+          className={`block w-4 h-px bg-dark transition-all duration-300 ${open ? "opacity-0" : ""}`}
         />
         <span
-          className={`block w-4 h-px bg-stone-600 transition-all duration-300 ${open ? "-rotate-45 -translate-y-1.5" : ""}`}
+          className={`block w-4 h-px bg-dark transition-all duration-300 ${open ? "-rotate-45 -translate-y-1.5" : ""}`}
         />
       </button>
 

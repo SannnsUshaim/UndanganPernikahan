@@ -10,6 +10,7 @@ import ClosingSection from "./components/ClosingSection";
 import HomeSection from "./components/HomeSection";
 import GuestGuard from "./components/GuestGuard";
 import AdminPage from "./pages/AdminPage";
+import Song from "./components/Song";
 import { Routes, Route } from "react-router-dom";
 
 export default function App() {
@@ -21,16 +22,13 @@ export default function App() {
         element={
           <GuestGuard>
             <div className="h-dvh lg:flex lg:h-screen selection:text-light selection:bg-primary">
-              {/* Kiri — cover carousel (desktop only) */}
               <div className="hidden lg:block lg:basis-8/15 lg:sticky lg:top-0 lg:h-screen">
                 <CoverPage desktopMode />
               </div>
-              {/* Kanan — semua konten */}
               <div className="h-dvh lg:basis-7/15 lg:overflow-y-auto lg:h-screen relative">
+                <Song />
                 <Sidebar />
                 <ScrollToTop />
-
-                {/* Mobile cover */}
                 <div className="h-dvh lg:hidden">
                   <CoverPage />
                 </div>
