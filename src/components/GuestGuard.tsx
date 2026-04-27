@@ -1,5 +1,5 @@
 import { useGuest } from "../hooks/useGuest";
-import Forbidden from "../error/Forbidden";
+import Forbidden from "../pages/error/Forbidden";
 
 export default function GuestGuard({ children }: { children: React.ReactNode }) {
   const { isValid } = useGuest();
