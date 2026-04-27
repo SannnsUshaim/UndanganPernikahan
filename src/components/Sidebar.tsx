@@ -5,7 +5,6 @@ const navItems = [
   { id: "mempelai", label: "Bride & Groom" },
   { id: "galeri", label: "Galery" },
   { id: "venue", label: "Venue" },
-  { id: "cerita", label: "Our Story" },
   { id: "rsvp", label: "RSVP" },
   { id: "gift", label: "Wedding Gift" },
   { id: "penutup", label: "Thank You" },

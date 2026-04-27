@@ -4,7 +4,6 @@ import CoverPage from "./components/CoverPage";
 import CoupleSection from "./components/CoupleSection";
 import GalerySection from "./components/GalerySection";
 import VenueSection from "./components/VenueSection";
-// import StorySection from "./components/StorySection";
 import RsvpUcapanSection from "./components/RsvpUcapanSection";
 import GiftSection from "./components/GiftSection";
 import ClosingSection from "./components/ClosingSection";
@@ -40,7 +39,6 @@ export default function App() {
                 <CoupleSection />
                 <GalerySection />
                 <VenueSection />
-                {/* <StorySection /> */}
                 <RsvpUcapanSection />
                 <GiftSection />
                 <ClosingSection />
