@@ -5,7 +5,7 @@ export default function Forbidden() {
         <img
           src="/EF_Icon.svg"
           alt="EF Icon"
-          className="w-24 h-24 mb-4"
+          className="w-20 h-20 lg:w-24 lg:h-24 mb-4"
         />
         <p className="text-6xl lg:text-7xl font-serif text-dark mb-4">403</p>
       </div>
