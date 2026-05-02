@@ -38,8 +38,8 @@ export default function GalerySection() {
         <h2 className="font-body text-3xl text-light tracking-wide">Galery</h2>
       </div>
 
-      <div className="relative max-w-xl mx-auto">
-        <div className="relative aspect-4/3 rounded-2xl overflow-hidden bg-stone-100">
+      <div className="relative w-full mx-auto">
+        <div className="relative aspect-3/2 rounded-2xl overflow-hidden bg-light/70">
           {galeriImages.map((src, i) => (
             <div
               key={src}
@@ -59,11 +59,11 @@ export default function GalerySection() {
           >
             ›
           </button>
-          <div className="absolute bottom-3 right-4 text-xs text-white/80 bg-black/30 px-2 py-1 rounded-full">
+          {/* <div className="absolute bottom-3 right-4 text-xs text-white/80 bg-black/30 px-2 py-1 rounded-full">
             {current + 1} / {galeriImages.length}
-          </div>
+          </div> */}
         </div>
-        <div className="flex justify-center gap-1.5 mt-4">
+        {/* <div className="flex justify-center gap-1.5 mt-4">
           {galeriImages.map((_, i) => (
             <button
               key={i}
@@ -71,7 +71,7 @@ export default function GalerySection() {
               className={`h-1 rounded-full transition-all duration-300 ${i === current ? "w-5 bg-secondary" : "w-1.5 bg-light/50"}`}
             />
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );
