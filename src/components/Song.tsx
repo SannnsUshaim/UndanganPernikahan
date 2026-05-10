@@ -3,55 +3,49 @@ import { useState, useEffect, useRef } from "react";
 export default function Song() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [playing, setPlaying] = useState(false);
+  const [started, setStarted] = useState(false);
 
   useEffect(() => {
-    const audio = audioRef.current;
-    if (!audio) return;
-
-    const attemptPlay = () => {
-      const playPromise = audio.play();
-
-      if (playPromise !== undefined) {
-        playPromise
-          .then(() => {
-            setPlaying(true);
-          })
-          .catch(() => {
-            setPlaying(false);
-
-            const handleFirstInteraction = () => {
-              audio.play();
-              setPlaying(true);
-              // Hapus listener setelah berhasil play agar tidak menumpuk
-              document.removeEventListener("click", handleFirstInteraction);
-              document.removeEventListener(
-                "touchstart",
-                handleFirstInteraction,
-              );
-            };
-
-            document.addEventListener("click", handleFirstInteraction, {
-              once: true,
-            });
-            document.addEventListener("touchstart", handleFirstInteraction, {
-              once: true,
-            });
-          });
+    const handleFirstInteraction = () => {
+      if (!started) {
+        audioRef.current?.play();
+        setPlaying(true);
+        setStarted(true);
       }
     };
 
-    attemptPlay();
+    document.addEventListener("click", handleFirstInteraction, { once: true });
+    document.addEventListener("touchstart", handleFirstInteraction, {
+      once: true,
+    });
 
     return () => {
-      document.removeEventListener("click", () => {});
-      document.removeEventListener("touchstart", () => {});
+      document.removeEventListener("click", handleFirstInteraction);
+      document.removeEventListener("touchstart", handleFirstInteraction);
     };
-  }, []);
+  }, [started]);
+
+  useEffect(() => {
+    const handleVisibility = () => {
+      if (!audioRef.current || !started) return;
+
+      if (document.hidden) {
+        audioRef.current.pause();
+      } else {
+        if (playing) {
+          audioRef.current.play();
+        }
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibility);
+    return () =>
+      document.removeEventListener("visibilitychange", handleVisibility);
+  }, [started, playing]);
 
   const toggle = (e: React.MouseEvent) => {
     e.stopPropagation();
     if (!audioRef.current) return;
-
     if (playing) {
       audioRef.current.pause();
     } else {
